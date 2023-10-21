@@ -109,11 +109,11 @@ function checkSystemForUpdate() {
 
 function uninstall(){
 	rm -r /usr/bin/hihy
-    bash <(curl -fsSL https://git.io/rmhysteria.sh)
+    bash <(curl -fsSL https://raw.githubusercontent.com/kirrathmx/hs/main/files/uninstall.sh)
 }
 
 function reinstall(){
-    bash <(curl -fsSL https://git.io/rehysteria.sh)
+    bash <(curl -fsSL https://raw.githubusercontent.com/kirrathmx/hs/main/files/reinstall.sh)
 }
 
 function printMsg(){
@@ -139,7 +139,7 @@ function printMsg(){
 
 function hihy(){
 	if [ ! -f "/usr/bin/hihy" ]; then
-  		wget -q -O /usr/bin/hihy --no-check-certificate https://raw.githubusercontent.com/emptysuns/Hi_Hysteria/main/server/install.sh
+  		wget -q -O /usr/bin/hihy --no-check-certificate https://raw.githubusercontent.com/kirrathmx/hs/main/files/install.sh
 		chmod +x /usr/bin/hihy
 	fi	
 }
@@ -927,7 +927,7 @@ function hihyUpdate(){
 		echoColor green "Already the latest version.Ignore."
 	else
 		rm -r /usr/bin/hihy
-		wget -q -O /usr/bin/hihy --no-check-certificate https://raw.githubusercontent.com/emptysuns/Hi_Hysteria/main/server/install.sh 2>/dev/null
+		wget -q -O /usr/bin/hihy --no-check-certificate https://raw.githubusercontent.com/kirrathmx/hs/main/files/install.sh 2>/dev/null
 		chmod +x /usr/bin/hihy
 		echoColor green "Done."
 	fi
